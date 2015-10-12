@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151009000424) do
+=======
+ActiveRecord::Schema.define(version: 20151009012400) do
+>>>>>>> aa8eaa2aab64142eeba4366a55a62e5d7afdb1e8
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
