@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :items, only: [:create, :index]
   get 'welcome/index'
 
 

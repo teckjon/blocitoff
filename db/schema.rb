@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20151009000424) do
-=======
-ActiveRecord::Schema.define(version: 20151009012400) do
->>>>>>> aa8eaa2aab64142eeba4366a55a62e5d7afdb1e8
+ActiveRecord::Schema.define(version: 20151015033405) do
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "items", ["user_id"], name: "index_items_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
