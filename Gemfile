@@ -49,6 +49,6 @@ group :development, :test do
 
   
   gem 'rspec-rails', '~> 3.0'
-
+  gem 'faker', '~> 1.5.0'
 end
 
