@@ -1,6 +1,5 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
     def show
-        @user = User.find(params[:id])
-        @items = @user.items.visible_to(current_user)
+       @items = current_user.items
     end    
 end
