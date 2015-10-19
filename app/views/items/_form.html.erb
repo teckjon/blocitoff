@@ -10,6 +10,9 @@
        </ul>                    
       </div>
     <% end %>
+
+<%= link_to "", [current_user, @item], method: :delete, class: 'glyphicon glyphicon-ok' %>   
+
     <div class="form-group">
         <%= f.label :name  %>
         <%= f.text_field :name, class: 'form-control', placeholder: "Enter to do" %>
