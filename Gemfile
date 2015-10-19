@@ -36,6 +36,7 @@ gem 'bootstrap-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,6 +50,6 @@ group :development, :test do
 
   
   gem 'rspec-rails', '~> 3.0'
-  gem 'faker', '~> 1.5.0'
+
 end
 

@@ -5,13 +5,26 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
- include RandomData
+ require 'faker'
  
- # Create Posts
- 10.times do
-   Item.create!(
-     title:  RandomData.random_sentence,
-     body:   RandomData.random_paragraph
+
+ 5.times do
+   User.create!(
+     email:   Faker::Internet.email,
+     password: Faker::Internet.password
    )
  end
+ 
+ users = User.all
+
+ 
+ 15.times do
+  Item.create!(
+     user: users.sample,
+     name: Faker::Lorem.sentence
+     )
+ end
  items = Item.all
+
+ puts "#{User.count} users created"
+ puts "#{Item.count} users created"
